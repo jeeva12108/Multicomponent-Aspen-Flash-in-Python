@@ -27,7 +27,7 @@ for temperature in T:
     aspen.Engine.Run2() #for every temperature input the simulation is run
 
     x_comp.append(aspen.Tree.FindNode('\Data\Streams\LIQUID\Output\MOLEFRAC\MIXED\Comp_name').Value) #get the molefraction of liquid stream
-    #if throughing error, directly copy past the node from eqaution oriented tab in ASPEN
+    #if NameError occurs, directly copy past the node from eqaution oriented tab in ASPEN
     y_comp.append(aspen.Tree.FindNode('\Data\Streams\VAPOR\Output\MOLEFRAC\MIXED\Comp_name').Value) #get the mole fraction of vapor stream
 
 #x and y lists will be filled with mole fraction values now
